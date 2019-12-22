@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DynamicFormService } from '../../services/dynamic-form.service';
+import { FormConfig } from '../../models/form-config';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DynamicFormComponent implements OnInit {
 
-  constructor() { }
+  formConfig: FormConfig;
+
+  constructor(private formService: DynamicFormService) { }
 
   ngOnInit() {
+    this.formConfig = this.formService.getFormConfig();
   }
 
 }

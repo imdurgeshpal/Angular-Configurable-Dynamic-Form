@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BaseControlComponent } from './base-control.component';
+import { LabelControlComponent } from './label-control.component';
 
-describe('BaseControlComponent', () => {
-  let component: BaseControlComponent;
-  let fixture: ComponentFixture<BaseControlComponent>;
+describe('LabelControlComponent', () => {
+  let component: LabelControlComponent;
+  let fixture: ComponentFixture<LabelControlComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BaseControlComponent ]
+      declarations: [ LabelControlComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BaseControlComponent);
+    fixture = TestBed.createComponent(LabelControlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

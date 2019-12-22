@@ -1,1 +1,9 @@
-<p>dynamic-form-field works!</p>
+<div class="form-group row">
+
+  <label [attr.for]="field.property" class="col-4 col-form-label"
+    [class.required]="field.required">{{field.label}}</label>
+
+  <div class="col-8">
+    <ng-container #widgetContainer></ng-container>
+  </div>
+</div>

@@ -1,1 +1,31 @@
-<p>dynamic-form works!</p>
+<form [formGroup]="formConfig.formGroup" >
+  <ngb-tabset #tabset>
+    <!-- ng boosted nav tab -->
+    <ngb-tab [title]="nav.label"  *ngFor="let nav of formConfig.schema;let i=index;">
+      <!-- ngFor nav-->
+      <ng-template ngbTabContent>
+        <ng-container *ngTemplateOutlet="schemaTabContent; context:{nav: nav}"></ng-container>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+
+  <ng-template #schemaTabContent let-nav="nav">
+    <div class="row">
+      <div class="col-md-6" *ngFor="let side of nav.children; let i=index;">
+        <!-- ngfor side -->
+        <div class="card" *ngFor="let panel of side.children">
+          <!-- ngfor panel-->
+          <div class="card-header">{{panel.label}}</div>
+          <div class="card-body">
+            <!-- ngFor fields -->
+            <ng-container *ngFor="let control of panel.children">
+              <app-dynamic-form-field [field]="control.field" [formGroup]="formConfig.formGroup">
+              </app-dynamic-form-field>
+            </ng-container>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </ng-template>
+</form>
