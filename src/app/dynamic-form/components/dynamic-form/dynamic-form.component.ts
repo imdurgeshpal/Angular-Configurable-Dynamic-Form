@@ -17,4 +17,8 @@ export class DynamicFormComponent implements OnInit {
     this.formConfig = this.formService.getFormConfig();
   }
 
+  submit() {
+    console.log(this.formConfig.formGroup.value);
+  }
+
 }

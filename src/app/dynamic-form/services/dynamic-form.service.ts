@@ -24,6 +24,34 @@ export class DynamicFormService {
                   label: 'Id',
                   property: 'id',
                   type: 'LABEL',
+                  required: false,
+                  value: 1
+                }
+              },
+              {
+                label: 'firstName',
+                field: {
+                  label: 'First Name',
+                  property: 'firstName',
+                  type: 'INPUT',
+                  required: true
+                }
+              },
+              {
+                label: 'middleName',
+                field: {
+                  label: 'Middle Name',
+                  property: 'middleName',
+                  type: 'INPUT',
+                  required: false
+                }
+              },
+              {
+                label: 'lastName',
+                field: {
+                  label: 'Last Name',
+                  property: 'lastName',
+                  type: 'INPUT',
                   required: false
                 }
               }
