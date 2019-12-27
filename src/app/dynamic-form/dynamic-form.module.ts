@@ -7,14 +7,14 @@ import { DynamicFormFieldComponent } from './components/dynamic-form-field/dynam
 import { LabelControlComponent } from './components/dynamic-controls/label-control/label-control.component';
 import { InputControlComponent } from './components/dynamic-controls/input-control/input-control.component';
 
-const exports = [
+const exportComponent = [
 LabelControlComponent,
 InputControlComponent
 ]
 
 @NgModule({
   declarations: [
-    ...exports,
+    ...exportComponent,
     DynamicFormComponent,
     DynamicFormFieldComponent
     ],
@@ -27,7 +27,7 @@ InputControlComponent
     DynamicFormComponent
   ],
   entryComponents : [
-    ...exports
+    ...exportComponent
   ]
 })
 export class DynamicFormModule { }
