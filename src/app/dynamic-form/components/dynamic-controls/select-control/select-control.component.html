@@ -1,0 +1,5 @@
+<div [formGroup]="formGroup">
+    <select class="form-control" [attr.id]="field.property" [formControlName]="field.property">
+        <option *ngFor="let opt of field.options" [value]="opt">{{opt}}</option>
+    </select>
+</div>

@@ -9,7 +9,7 @@ import { FieldConfig } from '../models/field-config';
 })
 export class DynamicFormService {
 
-  private schema: Schema [] = [{
+  private schema: Schema[] = [{
     label: 'General',
     children: [
       {
@@ -58,9 +58,114 @@ export class DynamicFormService {
             ]
           }
         ]
+      },
+      {
+        label: 'right',
+        children: [
+          {
+            label: 'Age Details',
+            children: [
+              {
+                label: 'DOB',
+                field: {
+                  label: 'Date Of Birth',
+                  property: 'dob',
+                  type: 'INPUT',
+                  required: false
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
-  }] as Schema [];
+  },
+  {
+    label: 'General',
+    children: [
+      {
+        label: 'left',
+        children: [
+          {
+            label: 'General Information',
+            children: [
+              {
+                label: 'Id',
+                field: {
+                  label: 'Id',
+                  property: 'id',
+                  type: 'LABEL',
+                  required: false,
+                  value: 1
+                }
+              },
+              {
+                label: 'firstName',
+                field: {
+                  label: 'First Name',
+                  property: 'firstName',
+                  type: 'INPUT',
+                  required: true
+                }
+              },
+              {
+                label: 'middleName',
+                field: {
+                  label: 'Middle Name',
+                  property: 'middleName',
+                  type: 'INPUT',
+                  required: false
+                }
+              },
+              {
+                label: 'lastName',
+                field: {
+                  label: 'Last Name',
+                  property: 'lastName',
+                  type: 'INPUT',
+                  required: false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'right',
+        children: [
+          {
+            label: 'Age Details',
+            children: [
+              {
+                label: 'DOB',
+                field: {
+                  label: 'Date Of Birth',
+                  property: 'dob',
+                  type: 'INPUT',
+                  required: false
+                }
+              }
+            ]
+          },
+          {
+            label: 'Interests',
+            children: [
+              {
+                label: 'Hobbies',
+                field: {
+                  label: 'Hobbies',
+                  property: 'hobbies',
+                  type: 'SELECT',
+                  required: false,
+                  options: ['Playing', 'Coocking']
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }] as Schema[];
 
   constructor(private formBuilder: FormBuilder) { }
 
