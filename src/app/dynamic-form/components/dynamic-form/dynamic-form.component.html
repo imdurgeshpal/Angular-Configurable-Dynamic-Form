@@ -1,6 +1,6 @@
-<div class="mt-2">
+<!-- <div class="mt-2">
   <button class="btn btn-primary" (click)="submit()">Submit</button>
-</div>
+</div> -->
 <form [formGroup]="formConfig.formGroup" class="mt-2" >
   <ngb-tabset #tabset>
     <!-- ng boosted nav tab -->
@@ -16,10 +16,10 @@
     <div class="row">
       <div class="col-md-6" *ngFor="let side of nav.children; let i=index;">
         <!-- ngfor side -->
-        <div class="card" *ngFor="let panel of side.children">
+        <div class="card mt-4" *ngFor="let panel of side.children">
           <!-- ngfor panel-->
           <div class="card-header">{{panel.label}}</div>
-          <div class="card-body">
+          <div class="card-body bg-light">
             <!-- ngFor fields -->
             <ng-container *ngFor="let control of panel.children">
               <app-dynamic-form-field [field]="control.field" [formGroup]="formConfig.formGroup">
