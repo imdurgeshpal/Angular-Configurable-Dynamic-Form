@@ -217,15 +217,19 @@ export class DynamicFormService {
   },
   {
     label: 'Family',
+    gender: 'nav',
     children: [
       {
         label: 'left',
+        gender: 'side',
         children: [
           {
             label: 'Father',
+            gender: 'panel',
             children: [
               {
                 label: 'First Name',
+                gender: 'controls',
                 field: {
                   label: 'First Name',
                   property: 'fatherFirstName',

@@ -18,8 +18,6 @@ export class DynamicFormFieldComponent implements OnInit {
   constructor(private resolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
-    // this.control = this.formGroup.get(this.field.property);
-
     // getting widget component or label widget component based on configuration of field
     const control = controlMapper[this.field.type];
 
